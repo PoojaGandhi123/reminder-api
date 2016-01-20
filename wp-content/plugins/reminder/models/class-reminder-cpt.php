@@ -16,7 +16,7 @@ if ( ! class_exists( 'Reminder_CPT' ) ) {
 
 	class Reminder_CPT {
 		function __construct() {
-			add_action( 'init', $this, 'register_cpt' );
+			add_action( 'init', array( $this, 'register_cpt' ) );
 		}
 
 		function register_cpt() {
