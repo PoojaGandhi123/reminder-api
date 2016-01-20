@@ -118,12 +118,9 @@ if ( ! class_exists( 'Reminder' ) ) {
 		 */
 		private function includes() {
 			include_once trailingslashit( RM_PATH ) . 'lib/class-rm-autoload.php';
-			new WM_Autoload( trailingslashit( WM_PATH ) . 'revision/' );
-			new WM_Autoload( trailingslashit( WM_PATH ) . 'settings/' );
+			new RM_Autoload( trailingslashit( RM_PATH ) . 'models/' );
 
-			new WM_Settings();
-			new WM_Admin();
-			new WM_Revision();
+			new Reminder_CPT();
 		}
 
 		/**
