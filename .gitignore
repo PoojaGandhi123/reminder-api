@@ -1,6 +1,7 @@
 # Created by .ignore support plugin (hsz.mobi)
 ### WordPress template
 *.log
+*.conf
 .htaccess
 sitemap.xml
 sitemap.xml.gz
