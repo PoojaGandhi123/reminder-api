@@ -119,7 +119,10 @@ if ( ! class_exists( 'Reminder' ) ) {
 		private function includes() {
 			include_once trailingslashit( RM_PATH ) . 'lib/class-rm-autoload.php';
 			new RM_Autoload( trailingslashit( RM_PATH ) . 'models/' );
+			new RM_Autoload( trailingslashit( RM_PATH ) . 'api/' );
 
+			new Reminder_Authorization_Endpoint();
+			new RM_User();
 			new Reminder_CPT();
 		}
 
