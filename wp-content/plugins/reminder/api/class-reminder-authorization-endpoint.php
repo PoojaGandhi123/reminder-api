@@ -30,9 +30,7 @@ if ( ! class_exists( 'Reminder_Authorization_Endpoint' ) ) {
 		function get_cookie_nonce( $data ) {
 			$nonce = wp_create_nonce( 'wp_rest' );
 
-			return wp_json_encode( array(
-				'nonce' => $nonce,
-			) );
+			return new WP_REST_Response( array( 'nonce' => $nonce ) );
 		}
 	}
 
