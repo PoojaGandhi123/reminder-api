@@ -1,0 +1,66 @@
+{
+  "name": "reminder",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "description": {
+      "type": "string",
+      "required": true
+    },
+    "author": {
+      "type": "string",
+      "required": true
+    },
+    "friend": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "default": "time"
+    },
+    "priority": {
+      "type": "number",
+      "default": 10
+    },
+    "date": {
+      "type": "date",
+      "required": true
+    },
+    "dateGMT": {
+      "type": "date",
+      "required": true
+    },
+    "reminderDate": {
+      "type": "date",
+      "required": true
+    },
+    "reminderDateGMT": {
+      "type": "date",
+      "required": true
+    },
+    "isResponded": {
+      "type": "boolean",
+      "default": false
+    },
+    "response": {
+      "type": "string"
+    },
+    "location": {
+      "type": "geopoint"
+    },
+    "locationType": {
+      "type": "string"
+    },
+    "locationRadius": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
